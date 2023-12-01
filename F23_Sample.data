@@ -1,0 +1,101 @@
+------------------------------- NOTE ----------------------------------------
+
+You are required to input the following data into your database accurately,
+because they will be used in the demo.
+ 
+The data sheet is just some data your system should manage,
+it does not mean that you should store them in this form,
+you should create your own database schema by yourself.
+
+This data is a snapshot of your system on 10/16/2023. Since we only care about 
+all the transactions that happen in a month, you can assume there are no transactions 
+from 10/01/2023 to 10/16/2023 which means the account balance remains the same during 
+this period. In the demo, we will ask you to set the date to some day, say 10/18/2023. 
+So it means no transactions happen between 10/16/2023 and 10/18/2023. This is important 
+because it will affect the monthly interest calculation.
+
+Additionally, for the purposes of the demo, you may assume that each stock was bought
+at whatever the current price for that stock is.
+
+-----------------------------------------------------------------------------
+ 
+ADMINISTRATOR (MANAGER/employees)
+=============
+
+Name,username,password,STATE,Phone,email,TAXID
+John Admin,admin,secret,CA,(805)6374632,admin@stock.com,000001000
+
+CUSTOMERS  
+=========
+
+Name,username,password,STATE,Phone,email,TAXID
+'Alfred Hitchcock','alfred','hi','CA','8052574499','alfred@hotmail.com','000001022'
+'Billy Clinton','billy','cl','CA','8055629999','billy@yahoo.com','000003045'
+'Cindy Laugher','cindy','la','CA','8056930011','cindy@hotmail.com','000002034'
+'David Copperfill','david','co','CA','8058240011','david@yahoo.com','000004093'
+'Elizabeth Sailor','sailor','sa','CA','8051234567','sailor@hotmail.com','000001234'
+'George Brush','brush','br','CA','8051357999','george@hotmail.com','000008956'
+'Ivan Stock','ivan','st','NJ','8053223243','ivan@yahoo.com','000002341'
+'Joe Pepsi','joe','pe','CA','8055668123','pepsi@pepsi.com','000000456'
+'Magic Jordon','magic','jo','NJ','8054535539','jordon@jordon.org','000003455'
+'Olive Stoner','olive','st','CA','8052574499','olive@yahoo.com','000001123'
+'Frank Olson','frank','ol','CA','8053456789','frank@gmail.com','000003306'
+
+
+STOCK OWNERSHIP INFORMATION
+===========================
+
+USERNAME,STOCKACCOUNTID,#OFSHARES(10/16/2023),ACTORID(STOCKID)
+alfred,012,100,SKB
+billy,013,500,SMD
+billy,014,100,STC
+cindy,015,250,STC
+david,016,100,SKB
+david,017,500,SMD
+david,018,50,STC
+sailor,019,1000,SMD
+brush,020,100,SKB
+ivan,021,300,SMD
+joe,022,500,SKB
+joe,023,100,STC
+joe,024,200,SMD
+magic,025,1000,SKB
+olive,026,100,SKB
+olive,027,100,SMD
+olive,028,100,STC
+frank,029,100,SKB
+frank,030,200,STC
+frank,031,100,SMD
+
+MARKET ACCOUNT INFORMATION
+==========================
+
+USERNAME,MARKETACCOUNTID,BALANCE($)
+alfred,001,10000
+billy,002,100000
+cindy,003,50000
+david,004,45000
+sailor,005,200000
+brush,006,5000
+ivan,007,2000
+joe,008,10000
+magic,009,130200
+olive,010,35000
+frank,011,30500
+
+ACTORS-STOCK-INFO
+=================
+
+ACTORID(STOCKID),CURRENTPRICE(10/16/2023),NAME,DOB,MovieTitle,Role,Year,Contract
+SKB,40.00,Kim Basinger,8 December 1958,L.A. Confidential,Actor,1997,5000000
+SMD,71.00,Michael Douglas,25 September 1944,A Perfect Murder,Actor,1998,10000000
+STC,32.50,Tom Cruise,3 July 1962,Jerry Maguire,Actor,1996,5000000
+
+MOVIE-INFO
+==========
+
+TITLE,PRODUCTIONYEAR,RATING,REVIEW
+L.A. Confidential,1997,10.0,"I loved it - it's almost as good as Chinatown!"
+L.A. Confidential,1997,10.0,"Super clever story with an amazing cast as well."
+A Perfect Murder,1998,6.1,"Truly one of the movies of all time."
+Jerry Maguire,1996,8.3,"What an emotional rollercoaster!"
